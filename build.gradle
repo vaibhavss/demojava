@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+ 
+mainClassName = "AlphaCounter"
+ 
+jar {
+    manifest { attributes 'Main-Class': "$mainClassName" }
+}
+repositories { jcenter() }
+ 
+dependencies { compile 'org.apache.hadoop:hadoop-client:2.7.3' }
